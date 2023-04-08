@@ -6,6 +6,15 @@
   padding: 0;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Roboto&display=swap");
+
+:root {
+  --side-bar-color: #0ea5e9;
+  --side-bar-font-color: white;
+  --header-color: #fafaf9;
+  --main-content: #e5e5e5;
+  font-family: "Roboto", sans-serif;
+}
 .container {
   display: grid;
   height: min(100vh);
@@ -22,25 +31,43 @@
   grid-row: span 2;
   display: grid;
   grid-template-rows: 1fr 2fr 3fr;
+  background-color: var(--side-bar-color);
+  color: var(--side-bar-font-color);
+  font-weight: bold;
 }
 
 .sidebar-section div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: max(80%);
+}
+
+.sidebar-section div > * {
+}
+
+.sidebar-section div div {
+  width: 7rem;
   display: flex;
   justify-content: flex-start;
 }
 
 img {
   width: 2rem;
+  filter: invert(100%) sepia(71%) saturate(2%) hue-rotate(360deg)
+    brightness(112%) contrast(101%);
 }
 
 header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  background-color: var(--header-color);
 }
 
 .main-content {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  background-color: var(--main-content);
 }
 
 .content-left {
