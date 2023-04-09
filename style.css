@@ -52,7 +52,7 @@
   justify-content: flex-start;
 }
 
-img {
+.sidebar img {
   width: 2rem;
   filter: invert(100%) sepia(71%) saturate(2%) hue-rotate(360deg)
     brightness(112%) contrast(101%);
@@ -82,4 +82,22 @@ header {
 .content-right {
   display: grid;
   grid-template-columns: 1fr;
+}
+
+#search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#search img {
+  width: 1rem;
+  margin: 0 1rem;
+}
+
+#search input {
+  height: min(1rem);
+  width: min(75%);
+  border-radius: 10px;
+  background-color: var(--main-content);
 }
