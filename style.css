@@ -72,7 +72,8 @@ header {
 
 .content-left {
   display: grid;
-  grid-template-columns: 2;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
 }
 
 .content-left > h3 {
@@ -86,7 +87,7 @@ header {
 
 #search {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
@@ -100,4 +101,47 @@ header {
   width: min(75%);
   border-radius: 10px;
   background-color: var(--main-content);
+}
+
+#notification {
+  width: 1rem;
+}
+
+#notifications {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  margin: 0 min(0.75rem);
+  width: 5rem;
+}
+
+#title {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+}
+
+#buttons button:nth-child(2) {
+  margin: 0 2rem;
+}
+
+.header-btn {
+  border-radius: 10px;
+  height: min(50%);
+  width: min(25%);
+  background-color: var(--side-bar-color);
+  color: var(--side-bar-font-color);
+}
+
+.content-left div {
+  background-color: black;
+  width: min(25%);
+  height: min(50%);
 }
