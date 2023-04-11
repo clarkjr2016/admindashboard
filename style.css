@@ -68,24 +68,19 @@ header {
   display: grid;
   grid-template-columns: 2fr 1fr;
   background-color: var(--main-content);
+  grid-auto-rows: auto;
 }
 
 .content-left {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
+  grid-auto-rows: auto;
 }
 
-.content-left:nth-child(1) {
-  grid-row: 1;
-  height: 1rem;
-}
-
-.content-left > h3 {
+.content-left h3 {
   grid-column: span 2;
-  display: flex;
-  align-items: flex-end;
-  width: min(75%);
+  justify-self: self-start;
 }
 
 .content-right {
@@ -155,7 +150,15 @@ header {
 }
 
 .img-container {
-  width: min(1rem);
   display: flex;
-  justify-self: flex-end;
+  justify-content: flex-end;
+  border: 5px solid black;
+}
+
+.img-container img {
+  width: min(1.5rem);
+}
+
+.img-container img:nth-child(2) {
+  margin: 0 0.5rem;
 }
