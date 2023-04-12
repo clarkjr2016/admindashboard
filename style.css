@@ -68,19 +68,16 @@ header {
   display: grid;
   grid-template-columns: 2fr 1fr;
   background-color: var(--main-content);
-  grid-auto-rows: auto;
 }
 
 .content-left {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-  grid-auto-rows: auto;
 }
 
-.content-left h3 {
+.content-left > h3 {
   grid-column: span 2;
-  justify-self: self-start;
 }
 
 .content-right {
@@ -143,22 +140,8 @@ header {
   color: var(--side-bar-font-color);
 }
 
-.card-left {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-}
-
-.img-container {
-  display: flex;
-  justify-content: flex-end;
-  border: 5px solid black;
-}
-
-.img-container img {
-  width: min(1.5rem);
-}
-
-.img-container img:nth-child(2) {
-  margin: 0 0.5rem;
+.content-left div {
+  background-color: black;
+  width: min(25%);
+  height: min(50%);
 }
