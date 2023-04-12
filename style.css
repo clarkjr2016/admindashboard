@@ -30,7 +30,7 @@
 .sidebar {
   grid-row: span 2;
   display: grid;
-  grid-template-rows: 1fr 2fr 3fr;
+  grid-template-rows: minmax(30px, 75px) minmax(30px, 300px) minmax(30px, 75px);
   background-color: var(--side-bar-color);
   color: var(--side-bar-font-color);
   font-weight: bold;
@@ -71,16 +71,38 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   background-color: var(--main-content);
+  grid-template-rows: 0.2fr 2fr 2fr 2fr;
+  padding: 2rem;
 }
 
-.content-left {
+#your-projects {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
+  align-items: end;
+  grid-column: span 2;
 }
 
-.content-left > h3 {
-  grid-column: span 2;
+#ia {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+}
+
+#ad {
+  grid-row: 4 / 5;
+  grid-column: 1 / 2;
+}
+
+#epa {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+}
+
+#mm {
+  grid-row: 4 / 5;
+  grid-column: 2 / 3;
+}
+
+.card > div img {
+  width: 2rem;
 }
 
 .content-right {
