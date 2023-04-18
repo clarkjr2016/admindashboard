@@ -93,6 +93,34 @@
   border: 5px solid orangered;
 }
 
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.header.top-left {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header.top-left img {
+  width: 2rem;
+  margin: 0px 0.1rem;
+}
+
+.header.top-left #search {
+  height: min(1.5rem);
+  width: min(75%);
+  border-radius: 10px;
+  background-color: var(--main-content-bkg);
+}
+
+.header div {
+  border: 5px solid green;
+}
+
 .main {
   display: grid;
   grid-template-columns: 70% 30%;
